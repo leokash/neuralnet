@@ -1,7 +1,7 @@
 
 @file:Suppress(
-        "UnstableApiUsage",
-        "SuspiciousCollectionReassignment"
+    "UnstableApiUsage",
+    "SuspiciousCollectionReassignment"
 )
 
 buildscript {
@@ -37,6 +37,9 @@ tasks {
             attributes["Implementation-Vendor"]  = "Kash Kabeya"
             attributes["Implementation-Version"] = appVersion
         }
+    }
+    test {
+        useJUnitPlatform()
     }
     clean {
         delete("build")
